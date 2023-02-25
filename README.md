@@ -16,5 +16,6 @@
   </ul>
   
   <p>Addition resources:</p>
+  <p>Website Link: https://josephtiamzon.github.io/EP1000/ </p>
   <p>Final Video: https://youtu.be/PaBBR9ID0sE </p>
   <p>Slides: https://1drv.ms/p/s!AiLyTnsgeTcwiC6uwcXOfRAsJqKL?e=dhdSbO </p>
