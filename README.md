@@ -17,4 +17,4 @@ Hello!
   
   Addition resources:
   Final Video: https://youtu.be/PaBBR9ID0sE
-  Slides: 
+  Slides: https://1drv.ms/p/s!AiLyTnsgeTcwiC6uwcXOfRAsJqKL?e=dhdSbO
