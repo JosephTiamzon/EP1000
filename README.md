@@ -1,5 +1,6 @@
 # EP1000
-Joseph Tiamzon's website for module EP1000
+Hello!
+  This GitHub page belongs to Joseph Martin C. Tiamzon, student of EP1000 22/23 Sem2. This page contains 
 
 This file contains 6 scripts (5 HTML scripts and 1 CSS script)
 
