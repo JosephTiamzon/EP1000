@@ -12,9 +12,9 @@ Hello!
   <li>style.css</li>
   <li>images folder</li>
   <li>videos folder</li>
-  <li>slides folder</li>
+  <li>PowerPoint slides</li>
   </ul>
   
   Addition resources:
-  Final Video:
+  Final Video: https://youtu.be/PaBBR9ID0sE
   Slides: 
