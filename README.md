@@ -1,8 +1,8 @@
 # EP1000 Joseph Tiamzon
-Hello!
-  Welcome to Joseph Tiamzon's GitHub page. This page is to document my work and progress throughout my time in EP1000.
+<p>Hello!</p>
+  <p>Welcome to Joseph Tiamzon's GitHub page. This page is to document my work and progress throughout my time in EP1000.</p>
   
-  This page contains:
+  <p>This page contains:</p>
   <ul>
   <li>index.html</li>
   <li>module.html</li>
@@ -15,6 +15,6 @@ Hello!
   <li>PowerPoint slides</li>
   </ul>
   
-  Addition resources:
-  Final Video: https://youtu.be/PaBBR9ID0sE
-  Slides: https://1drv.ms/p/s!AiLyTnsgeTcwiC6uwcXOfRAsJqKL?e=dhdSbO
+  <p>Addition resources:</p>
+  <p>Final Video: https://youtu.be/PaBBR9ID0sE </p>
+  <p>Slides: https://1drv.ms/p/s!AiLyTnsgeTcwiC6uwcXOfRAsJqKL?e=dhdSbO </p>
