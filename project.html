@@ -1,0 +1,478 @@
+<html>
+  <head>
+    <title>Joseph Tiamzon (P1907492) EP1000</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="shortcut icon" type="image/png" href="JTlogo.png">
+  </head>
+
+  <body>
+    <a id="top"></a>
+	
+    <div id="container">
+
+      <div id="header" style="top: 0; width: 100%;">
+	    <img src="images/JTlogo.png" height= "100" width="100" style="float:left; margin-top: 10px; margin-left: 10px;" />
+		<h1 style="float:right; margin-top: 15px; margin-right: 770px;">EP1000 Digital Fabrication & Prototyping</h1>
+		<h2 style="float:right; margin-top: 8px; margin-right: 1280px;">P1907492</h2>
+	  </div>
+	  
+	  <div id="content">
+
+	    <div id="nav">
+	      <center>
+		    <img src="images/logo.png" class="logo"
+		    width="90" 
+            height="100"
+		    />
+		  
+		    <div id="navmain">
+		      <h2>Navigation</h2>
+		  
+	          <ul class="navmain">
+		        <li><a href="index.html" style="text-decoration: none;">Home</a></li>
+		        <li><a href="module.html" style="text-decoration: none;">Why EP1000</a></li>
+		        <li><a href="skills.html" style="text-decoration: none;">Module Journal</a></li>
+		        <li><a class="selected" href="project.html" style="text-decoration: none;">Project</a></li>
+		        <li><a href="me.html" style="text-decoration: none;">About Me</a></li>
+              </ul>
+		    </div>
+		
+		    <div id="navsub">
+		      <h2>Contents</h2>
+			
+              <ul class="navsub">
+			    <li><a href="#description" style="text-decoration: none;">Project Description</a></li>
+                <li><a href="#concept" style="text-decoration: none;">Concept Design</a></li>
+                <li><a href="#circuit" style="text-decoration: none;">Circuit Diagram</a></li>
+                <li><a href="#program" style="text-decoration: none;">Code</a></li>
+                <li><a href="#hardware" style="text-decoration: none;">Hardware</a></li>
+				<li><a href="#techniques" style="text-decoration: none;">Techniques</a></li>
+				<li><a href="#bill" style="text-decoration: none;">Bill of Materials</a></li>
+			    <li><a href="#final" style="text-decoration: none;">Final Product</a></li>
+				<li><a href="#additional" style="text-decoration: none;">Additional Resources</a></li>
+				<br>
+				<li><a href="#top" style="text-decoration: none;">Return to Top</a></li>
+              </ul>
+		    </center>
+          </div>
+	    </div>
+	  
+	    <div id="main">
+		  <div id="description">
+		    <h2>Project Description</h2>
+			  <p>Project name: RGB Music Box</p>
+			  <p>By a touch of your finger, the RGB Music Box will play calming music on loop with sound-reactive RGB LED strips. The touch sensor starts and stops the music, with when the music starts playing, the microphone sound sensor then senses the music and the LED strip reacts to the beats of the music, lighting them up as it plays.</p>
+		      <p>The main features that the RGB Music Box will offer are:</p>
+			  <ul>
+			    <li>Start / Stop enabled touch sensor</li>
+				<li>.mp3 music player through speaker</li>
+				<li>sound-reactive rainbow LED light-up feature</li>
+			  </ul>
+		  
+		  </div>
+		
+	      <div id="concept">
+		    <h2>Concept Design</h2>
+			  <p>The idea of the RGB Music Box is inspired from a portable boomboxes that plays music. In addition, it incorporates RGB lights to add some asthetic looks to it. This gives off a vibe of a portable DJ for parties or relaxation.</p> 
+			  <p>The idea in mind was for it to play a soundtrack of a famous youtube podcast, Trash Taste. As the music is playing from the speaker. The sound sensor beside the speaker would pick up the noise level from the speaker and propt the led to light up based on its beat. The music could start and stop based on the user's wants with a touch of his finger.</p>  
+		      <p>The concept design in mind is a speaker that is shaped as a pill to follow the design of bluetooth speakers that houses the components inside. The speaker will be incorporated inside, hidden from the user's sight. The LED strip will be behind a translucent pane to spread the light on a bigger area.</p>
+			    <center>
+			    <img src="images/Concept.png"
+		        width="500" 
+                height="280"
+		        />
+			  </center>
+		 </div>
+		
+		  <div id="circuit">
+		    <h2>Circuit Diagram</h2>
+			  <p>In order to build this, we would need all the necessary circuit components listed down below.</p>
+				<p>Components needed:</p>
+				<ul>
+				  <li>Arduino Uno</li>
+				  <li>Digital Touch Sensor Module</li>
+				  <li>Microphone Sound Sensor Module</li>
+				  <li>DFPlayer Mini</li>
+				  <li>MicroSD Card</li>
+				  <li>Speaker 1W 8Ω Buzzer Loud Piezo Arduino PIC</li>
+				  <li>WS2812B RGB LED Strip(10 Neopixels)</li>
+				  <li>jumper wires(male-to-male & male-to-female)</li>
+				</ul>
+			  <p>The circuit diagram shows how to connect all the components together.</p>	
+			  <center>
+			    <img src="images/CircuitDiagram.png"
+		        width="600" 
+                height="420"
+		        />
+			  </center>
+			  <p>The tables below shows the pins used for each component module and which pins are used for each module for an easier depiction of the circui diagram</p>
+			  <center>
+			    <img src="images/ArduinoPins.png"
+				width="250" 
+                height="555"
+		        />
+			  </center>
+			  <p>With all the connected pins and components, it will give us something like this.</p>
+			  <center>
+			    <img src="images/Circuit.jpg"
+				width="600" 
+                height="420"
+		        />
+			  </center>
+		  </div>
+		
+		  <div id="program">
+		    <h2>Code</h2>
+			  <p>Before running the code, we would need to install the necessary libraries to run it.</p>
+			  <p>Libraries needed:</p>
+			    <ul>
+				  <li>DFRobotPlayerMini by DFRobot</li>
+				  <li>FastLED by Daniel Garcia</li>
+				</ul>
+			  <p>This is the code that will be uploaded into the Arduino Uno to run the whole circuit.</p>
+			    <center>
+			      <textarea rows="50" cols="130">
+#include "SoftwareSerial.h"
+#include "DFRobotDFPlayerMini.h"
+#include "FastLED.h"
+
+#define NUM_LEDS 20
+#define DATA_PIN 7
+#define AVG_NOISE_LVL 970
+#define MAX_NOISE_LVL 1023
+
+int numLedsToLight = 0;
+int PlayState = 0;
+int touchInput = 8;
+int inputState;
+int lastInputState = 1;
+int dt = 100;
+
+// Use pins 2 and 3 to communicate with DFPlayer Mini
+static const uint8_t PIN_MP3_TX = 2;  // RX communication
+static const uint8_t PIN_MP3_RX = 3;  // TX communication
+SoftwareSerial softwareSerial(PIN_MP3_RX, PIN_MP3_TX);
+
+
+DFRobotDFPlayerMini player;  // Create the Player object
+
+CRGB leds[NUM_LEDS];  // Create Neopixel LEDs object
+
+void setup() {
+  Serial.begin(115200);        // USB serial port
+  softwareSerial.begin(9600);  // DFPlayer Mini serial port
+
+  pinMode(touchInput, INPUT);  // Touch sensor
+
+  // Neopixel LED strips
+  FastLED.addLeds<NEOPIXEL, DATA_PIN>(leds, NUM_LEDS);
+  FastLED.clear();
+
+  // Start communication with DFPlayer Mini
+  if (player.begin(softwareSerial)) {
+    Serial.println("OK");
+    player.volume(30);
+  } else {
+    Serial.println("Connecting to DFPlayer Mini failed!");
+  }
+}
+
+void loop() {
+  // Sets microphone sound sensor to detect noise level and translate it to the neopixel. Depending on the noise level, it calls for the neopixel rainbow LED function
+  int val = analogRead(A0);
+  numLedsToLight = map(val, MAX_NOISE_LVL - AVG_NOISE_LVL, 0, 0, NUM_LEDS);
+  int brightness = map(val, MAX_NOISE_LVL - AVG_NOISE_LVL, 0, 0, 255);
+
+  for (int led = numLedsToLight; led >= 0; led--) {
+    rainbow_wave(10, 10);
+  }
+
+  delay(10);
+  FastLED.setBrightness(brightness);
+  FastLED.show();
+  FastLED.clear(false);
+
+  // Detects touch sensor to toggle Start / Stop
+  inputState = digitalRead(touchInput);
+  if (lastInputState == 0 && inputState == 1) {
+    if (PlayState == 0) {  // Function when it is in "Start" state
+      PlayState = 1;
+      player.loop(1);  // Play 0001.mp3 on loop (Trash Taste soundtrack)
+    } else {           // Function when it is in "Stop" state
+      PlayState = 0;
+      player.play(2);  // Play 0002.mp3 for 1 second (silence)
+    }
+  }
+  lastInputState = inputState;
+  delay(dt);
+}
+
+// Function for neopixel rainbow LED wave
+void rainbow_wave(uint8_t thisSpeed, uint8_t deltaHue) {
+  uint8_t thisHue = beat8(thisSpeed, 255);
+  fill_rainbow(leds, numLedsToLight, thisHue, deltaHue);
+}
+			      </textarea>
+			    </center>
+			  <p>Within this section of the Code, the purpose of each portion of the code will be explained further.</p>
+			  <p>In order for the Arduino Uno to communicate with the DFPlayer Mini, it uses this code for pins 2 and 3 of the Arduino Uno to transmit and receive data to the TX and RX pins of the DFPlayer Mini.</p>
+			    <center>
+				  <textarea rows="3" cols="130">
+static const uint8_t PIN_MP3_TX = 2;  // RX communication
+static const uint8_t PIN_MP3_RX = 3;  // TX communication
+SoftwareSerial softwareSerial(PIN_MP3_RX, PIN_MP3_TX);				  
+				  </textarea>
+				</center>
+			  <p>The Arduino Uno initiates communication with the DFPlayer Mini, once communication with it is established, it will print "OK" on the serial monitor and set volume to the maximum level. If communication failed, it would print "Connecting to DFPlayer Mini failed!" on the serial monitor and requires troubleshooting.</p>
+				<center>
+				  <textarea rows="6" cols="130">
+if (player.begin(softwareSerial)) {
+    Serial.println("OK");
+    player.volume(30); 
+  } else {
+    Serial.println("Connecting to DFPlayer Mini failed!");
+  }	
+				  </textarea>
+				</center> 
+			  <p>The microphone sound sensor will detect the noise level from the speaker and convert that energy to the neopixel LED strips. For each noise at a certain level is detected by the microphone sound sensor, it will turn the LEDs on and clear them when no noise is detected. It also calls the rainbow LED wave function that will be shown later on in this section.</p>
+				<center>
+				  <textarea rows="12" cols="130">
+int val = analogRead(A0);
+  numLedsToLight = map(val, MAX_NOISE_LVL - AVG_NOISE_LVL, 0, 0, NUM_LEDS);
+  int brightness = map(val, MAX_NOISE_LVL - AVG_NOISE_LVL, 0, 0, 255);
+
+  for (int led = numLedsToLight; led >= 0; led--) {
+    rainbow_wave(10, 10);
+  }
+
+  delay(10);
+  FastLED.setBrightness(brightness);
+  FastLED.show();
+  FastLED.clear(false);				  
+				  </textarea>
+				</center>
+			  <p>The touch sensor with debounce will toggle between "Start" and "Stop" state upon last touch state. When it is in the "Start" state, it will play audio 0001.mp3 (Trash Taste soundtrack) on loop, allowing the microphone sound sensor to detect its noise level and have the LED react base on its beat. When it is in the "Stop" state, it will play audio 0002.mp3 (silence). This will act as an override so as to stop the audio 0001.mp3 from playing.<p>
+				<center>
+				  <textarea rows="12" cols="130">
+inputState = digitalRead(touchInput);
+if (lastInputState == 0 && inputState == 1) {
+  if (PlayState == 0) {
+    PlayState = 1;
+    player.loop(1);
+  } else {
+    PlayState = 0;
+    player.play(2);
+  }
+}
+  lastInputState = inputState;
+  delay(dt);
+				  </textarea>
+				</center> 
+			  <p>This function is used to create the rainbow wave effect for the LED strip.<p>
+				<center>
+				  <textarea rows="4" cols="130">
+void rainbow_wave(uint8_t thisSpeed, uint8_t deltaHue) {
+  uint8_t thisHue = beat8(thisSpeed, 255);  
+  fill_rainbow(leds, numLedsToLight, thisHue, deltaHue);
+}				  
+				  </textarea>
+				</center>
+		  </div>
+		
+		  <div id="hardware">
+		    <h2>Hardware</h2>
+			  <p>Once the code was settled, all that was left was to make the casing for the final product.</p>
+			  <p>Materials needed:</p>
+			    <ul>
+				  <li>1x 3mm Plywood Sheet</li>
+				  <li>1x 3mm Black Acrylic Sheet</li>
+				  <li>1x 3mm Matte/Frosted Clear Acrylic Sheet</li>
+				</ul>
+			  <p>To start off, the final design is made as a model in Fusion360.</p>
+			    <center>
+				  <p>Fusion360 project model:</p>
+				  <iframe src="https://ichat4012.autodesk360.com/shares/public/SH35dfcQT936092f0e43bc9eb53f51a57e1b?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+				</center>
+			  <p>After that, I took the sketch of the final design's model, added in the "box joint" & "living hinge" and saved it as a DXF file to be laser cutted.</p>
+			    <center>
+				  <p>Fusion360 project model flat:</p>
+			      <iframe src="https://ichat4012.autodesk360.com/shares/public/SH35dfcQT936092f0e4384b6228d18534f9e?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+				  <br>
+				  <p>Fusion360 sketch:</p>
+			        <img src="images/CasingSketch.jpg"
+		             width="600" 
+                      height="420"
+		              />
+			    </center>
+			  <p>Once the design is done, the sketch is saved as a .DXF file and brought to CorelDRAW to set its laser cutting parameters. The red-highlited sketches are cut-though items while the green-highlighted sketches are engraved items which is used for design purposes.</p>
+			    <center>
+				  <p>DXF file in CorelDRAW:</p>
+			        <img src="images/CorelDRAW.png"
+		              width="600" 
+                      height="420"
+		              />
+			    </center>
+				<br>
+			    <center>
+				  <p>laser cut materials:</p>
+			        <img src="images/materials.jpg"
+		              width="600" 
+                      height="420"
+		              />
+			    </center>
+			  <p>Beside laser cutting the outter cover, a holder to hold the components such as the microphone sound sensor and touch sensor are needed to be made so as to hold them in a proper place without damaging the component.</p>
+			    <center>
+				  <p>microphone sound sensor holder:</p>
+				    <iframe src="https://ichat4012.autodesk360.com/shares/public/SH35dfcQT936092f0e43c2e0119936577145?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+				      <br>
+					  <img src="images/soundSensorHolder.jpg"
+		              width="600" 
+                      height="420"
+		              />
+				</center>
+				<center>
+				  <p>touch sensor holder:</p>
+				    <iframe src="https://ichat4012.autodesk360.com/shares/public/SH35dfcQT936092f0e4389f664828fb162a9?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+					  <br>
+					  <img src="images/touchSensorHolder.jpg"
+		              width="600" 
+                      height="420"
+		              />
+				</center>
+			  <br>
+			  <p>With all the materials in hand, we can assemble all the pieces. Firstly, we place the component board that houses the Arduino Uno and breadboard onto the hole slot of the large wooden body. Place the black acrylic piece into the middle slot. Secure it with super glue to add extra sturdiness to it. Then on the front side, the LED strip is glued to the front area of the black acrylic piece. the rubber protector of the LED strip is attached to the acrylic using super glue. The purpose of this black acrylic is to hold the LED in place and hide all the circuitry from being soon from the front area.</p>
+			    <center>
+			        <img src="images/Project1.jpg"
+		              width="600" 
+                      height="420"
+		              />
+					<br>
+					<img src="images/Project2.jpg"
+		              width="600" 
+                      height="420"
+		              />
+			    </center>
+			  <p>We attach the touch sensor holder onto the box shaped hole of the large wooden body via super glue. This will help to hold the touch sensor in place located on the top of the music box. After the glue has dried, we rap the long top area around and lock it in place into the black acrylic slot.</p>
+			    <center>
+				  <img src="images/ProjectTouch.jpg"
+		              width="600" 
+                      height="420"
+		              />
+				</center>
+			  <p>Next step requires attaching the microphone sound sensor holder onto the back wooden piece. The location of the holder should be located near to the speaker for optimal usage. It is also important to take note of the hole placement for the Arduino Uno so as to allow the wire to connect to the Arduino Uno with ease. We then attach the back wooden piece to the wooden body and utilise super glue for extra sturdiness.</p>
+			    <center>
+				  <img src="images/ProjectSound.jpg"
+		              width="600" 
+                      height="420"
+		              />
+				  <br>
+				  <img src="images/Project3.jpg"
+		              width="600" 
+                      height="420"
+		              />	  
+				</center>
+			  <p>Lastly, we apply the front matte/frosted clear acrylic piece in the front with the design facing outwards. The reason for using matt/frosted clear acrylic was to help disperse the light from the LED strip over a larger area.</p>
+				<center>
+				  <img src="images/Project4.jpg"
+		              width="600" 
+                      height="420"
+		              />
+				</center>
+		  </div>
+		  
+		  <div id="techniques">
+		    <h2>Fabrication Techniques</h2>
+			  <p>Throughout this process, I have used various fabrication techniques to build this product. The techniques used are as follows.</p>
+			  <p>Techniques used:</p>
+			  <ul>
+			    <li>Arduino coding</li>
+				<li>Fusion360</li>
+				<li>Soldering</li>
+				<li>3D Printing</li>
+				<li>Laser Cutting</li>
+			  </ul>
+		  </div>
+		  
+		  <div id="bill">
+		    <h2>Bill of Materials</h2>
+			  <p>WIth the final product finished, we need to total up the cost to produce this.</p>
+			  <p>With materials such as the plywood and acrylic sheets beg enough to produce more than one piece of the project along with components of the circuit being baough in bulk, makes this product scalable and less costly to reporduce.</p>
+			  <center>
+			    <table style=" width: 30%; border: 1px solid black; border-collapse: collapse; background-color:white;">
+				  <tr>
+				    <th style="border: 1px solid black;">Material</th>
+					<th style="border: 1px solid black;">Cost</th>
+				  </tr>
+				  <tr>
+				    <td style="border: 1px solid black;">Arduino Uno</td>
+					<td style="border: 1px solid black;">≈$28</td>
+				  </tr>
+				  <tr>
+				    <td style="border: 1px solid black;">Touch Sensor</td>
+					<td style="border: 1px solid black;">≈$2</td>
+				  </tr>
+				  <tr>
+				    <td style="border: 1px solid black;">Micro Sound Sensor</td>
+					<td style="border: 1px solid black;">≈$2</td>
+				  </tr>
+				  <tr>
+				    <td style="border: 1px solid black;">DFPlayer Mini</td>
+					<td style="border: 1px solid black;">≈$4</td>
+				  </tr>
+				  <tr>
+				    <td style="border: 1px solid black;">Speaker</td>
+					<td style="border: 1px solid black;">≈$1</td>
+				  </tr>
+				  <tr>
+				    <td style="border: 1px solid black;">LED Strip</td>
+					<td style="border: 1px solid black;">≈$18</td>
+				  </tr>
+				  <tr>
+				    <td style="border: 1px solid black;">Plywood Sheet</td>
+					<td style="border: 1px solid black;">≈$15</td>
+				  </tr>
+				  <tr>
+				    <td style="border: 1px solid black;">Black Acrylic Sheet</td>
+					<td style="border: 1px solid black;">≈$12</td>
+				  </tr>
+				  <tr>
+				    <td style="border: 1px solid black;">Matte/Frosted Clear Acrylic Sheet</td>
+					<td style="border: 1px solid black;">≈$12</td>
+				  </tr>
+				  <tr>
+				    <th style="border: 1px solid black;">Total</td>
+					<th style="border: 1px solid black;">≈$94</td>
+				  </tr>
+				</table>
+			  </center>
+		  </div>
+		
+		  <div id="final">
+		    <h2>Final Product</h2>
+			  <p>This is the final result of the RGB Music Box.</p>
+		        <center>
+		          <iframe width="660" height="415" src="https://www.youtube.com/embed/PaBBR9ID0sE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		        </center>
+		  </div>
+		  
+		  <div id="additional">
+		    <h2>Additional Resources</h2>
+			  <p>PowerPoint Slide:</p>
+			    <center>
+				  <iframe src="https://ichatspedu-my.sharepoint.com/personal/josepht_19_ichat_sp_edu_sg/_layouts/15/Doc.aspx?sourcedoc={419fbd2b-c553-438d-9abc-a02928e78b70}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="600px" height="412px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+				</center>
+		  </div>
+		  <br>
+	    </div>
+	  
+	  </div>
+	
+	  <div id="footer" style="position: fixed; bottom: 0; width: 100%;">
+	    Copyright &copy; 2022 Joseph Tiamzon
+	  </div>
+		
+    </div>
+	
+  </body>
+  
+</html>
