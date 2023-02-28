@@ -10,9 +10,9 @@
   <li>project.html</li>
   <li>me.html</li>
   <li>style.css</li>
+  <li>PowerPoint slides</li>
   <li>images folder</li>
   <li>videos folder</li>
-  <li>PowerPoint slides</li>
   </ul>
   
   <p>Addition resources:</p>
